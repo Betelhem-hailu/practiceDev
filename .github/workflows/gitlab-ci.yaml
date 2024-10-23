@@ -13,4 +13,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm ci --cwd ${{ matrix.project }}
+        run: yarn install --cwd ${{ matrix.project }}
+
+      - name: Build project
+        run: yarn build --cwd ${{ matrix.project }}
