@@ -1,14 +1,19 @@
-name: GitLab CI
 on:
   push:
     branches: [master]
+
 jobs:
   build:
-    runs on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -uses: actions/checkout@v2
-      -name: build
-      run: npm install
-      run: npm run build
-      -name: run
-      run: npm start
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Start project
+        run: npm start
