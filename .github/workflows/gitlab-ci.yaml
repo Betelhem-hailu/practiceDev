@@ -5,9 +5,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [contact-form]
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --cwd ${{ matrix.project }}
