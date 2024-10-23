@@ -15,5 +15,3 @@ jobs:
       - name: Install dependencies
         run: yarn install --cwd ${{ matrix.project }}
 
-      - name: Build project
-        run: yarn build --cwd ${{ matrix.project }}
