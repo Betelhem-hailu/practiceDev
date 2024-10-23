@@ -10,7 +10,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm install
-
-      - name: Start project
-        run: npm start
+        run: npm ci
