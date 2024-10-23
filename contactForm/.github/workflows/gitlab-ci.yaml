@@ -1,4 +1,8 @@
 name: GitLab CI
+on:
+  push:
+    branches:
+      - main
 build:
   runs on: ubuntu-latest
   steps:
